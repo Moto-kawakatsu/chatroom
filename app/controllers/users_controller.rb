@@ -1,5 +1,11 @@
 class UsersController < ApplicationController
+    def index 
+    end
 
+    def new
+        @user = User.new
+    end
+        
     def edit
     end
 
@@ -14,6 +20,15 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.require(:user).permit(:name, :email)
+        params.require(:user).permit(
+            :name, 
+            :email, 
+            :password, 
+            :password_confirm,
+            :genre_id, 
+            :grade_id, 
+            :number, 
+            :class_number_id
+        )
     end
 end
