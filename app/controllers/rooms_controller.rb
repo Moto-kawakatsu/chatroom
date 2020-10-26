@@ -5,10 +5,11 @@ class RoomsController < ApplicationController
     end
 
     def create
+        # binding.pry
         @room = Room.new(room_params)
-        if @room.save
+        if @room.save!
             redirect_to root_path
-        else 
+        else
             render :new
         end
     end

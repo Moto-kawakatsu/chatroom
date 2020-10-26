@@ -6,6 +6,15 @@ class UsersController < ApplicationController
         @user = User.new
     end
         
+    def create
+        @user = User.new(user_params)
+        if current_user.save
+            redirect_to 
+        else
+            render :edit
+        end
+    end
+
     def edit
     end
 
@@ -27,7 +36,7 @@ class UsersController < ApplicationController
             :password_confirm,
             :genre_id, 
             :grade_id, 
-            :number, 
+            :number_id, 
             :class_number_id
         )
     end

@@ -47,4 +47,5 @@ class Number < ActiveHash::Base
         { id: 45, name: '43' },
         { id: 46, name: '44' },
         { id: 47, name: '45' }
+    ]
 end
