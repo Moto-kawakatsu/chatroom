@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   get 'messages/index'
   post 'rooms/create'
     root to: "rooms#index"
+    
     resources :users
-    resources :rooms do
-      resources :messages
-    end
+    resources :rooms
+    #   resources :messages
+    # end
 
 
     post 'rooms', to: 'rooms#create'

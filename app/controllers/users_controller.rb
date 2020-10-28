@@ -9,13 +9,14 @@ class UsersController < ApplicationController
     def create
         @user = User.new(user_params)
         if current_user.save
-            redirect_to 
+            redirect_to root_path
         else
-            render :edit
+            render :new
         end
     end
 
     def edit
+        @user = User.find(params[:id])
     end
 
     def update

@@ -1,11 +1,9 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
 
   extend ActiveHash::Associations::ActiveRecordExtensions
 
   devise :database_authenticatable, :registerable,
-  :recoverable, :rememberable,  :validatable
+         :recoverable, :rememberable,  :validatable
   
   belongs_to_active_hash :genre
   belongs_to_active_hash :grade
