@@ -13,7 +13,8 @@ class User < ApplicationRecord
   has_many :room_users
   has_many :rooms, through: :room_users
   has_many :messages
-          
+  accepts_nested_attributes_for :room_users
+  
  with_options presence: true do
    validates :name
    validates :email

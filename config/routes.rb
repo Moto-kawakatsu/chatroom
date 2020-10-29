@@ -5,9 +5,9 @@ Rails.application.routes.draw do
     root to: "rooms#index"
     
     resources :users
-    resources :rooms
-    #   resources :messages
-    # end
+    resources :rooms do
+      resources :messages
+    end
 
 
     post 'rooms', to: 'rooms#create'
