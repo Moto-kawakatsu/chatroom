@@ -45,37 +45,31 @@
         </div>
 
     <%# 商品の詳細 %>
-    <div class="items-detail">
-      <div class="weight-bold-text">ユーザーの詳細</div>
+    <div class="users-detail">
+
       <div class="form">
 
-        <div class="weight-bold-text">
-          ユーザータイプ
-          <span class="indispensable">必須</span>
-        </div>
+        <div class="weight-bold-text">ユーザータイプ</div>
           <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"user-genre"}) %>
         
-        <div class="weight-bold-text">
-          学年
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"user-grade-status"}) %>
+          
+        
+        <div class="weight-bold-text">学年</div>
+          <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"user-grade-status"}) %>
+        
 
-        <div class="weight-bold-text">
-          組
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:class_number_id, ClassNumber.all, :id, :name, {}, {class:"select-box", id:"class-number-status"}) %>
+        <div class="weight-bold-text">組</div>
+          <%= f.collection_select(:class_number_id, ClassNumber.all, :id, :name, {}, {class:"select-box", id:"class-number-status"}) %>
+      
 
-        <div class="weight-bold-text">
-          学年
-          <span class="indispensable">必須</span>
-        </div>
-        <%= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"select-box", id:"user-number-status"}) %>
+        <div class="weight-bold-text">学年</div>
+          <%= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"select-box", id:"user-number-status"}) %>
 
       </div>
+
     </div>
     <%# /商品の詳細 %>
+
 
 
         <div class='actions'>

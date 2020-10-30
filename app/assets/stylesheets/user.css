@@ -135,3 +135,18 @@
 .select-box {
   margin: 2vh 0;
 }
+
+.users-detail {
+  font-size:10px;
+  display:flex;
+  flex-direction:column;
+  height: 330px;
+}
+
+.form { 
+  display:flex;
+  flex-direction:column;
+  width: 50%;
+  font-size: 14px;
+  padding: 10 0;
+}

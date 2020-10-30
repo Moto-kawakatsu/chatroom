@@ -13,7 +13,6 @@ class RoomsController < ApplicationController
     def create
         @room = Room.new(room_params)
         if @room.save
-            # binding.pry
             redirect_to root_path
         else
             redirect_to new_room_path
