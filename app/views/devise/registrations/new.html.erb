@@ -15,7 +15,9 @@
             <%= f.text_field :name, autofocus: true%>
           </div>
         </div>
+        <div>
 
+        
         <div class='field'>
           <div class='field-label'>
             <%= f.label :email%>
@@ -42,32 +44,51 @@
           <div class='field-input'>
             <%= f.password_field :password_confirmation, autocomplete: "off"%>
           </div>
+          <br>
+          <%= f.radio_button :genre_id, 2 %>教師
+          <%= f.radio_button :genre_id, 3 %>生徒
+          <br>
+          <%= f.radio_button :grade_id, 2 %>1年
+          <%= f.radio_button :grade_id, 3 %>2年
+          <%= f.radio_button :grade_id, 4 %>3年
+          <br>
+          <%= f.radio_button :class_number_id, 3 %>1組
+          <%= f.radio_button :class_number_id, 4 %>2組
+          <%= f.radio_button :class_number_id, 5 %>3組
+          <%= f.radio_button :class_number_id, 6 %>4組
+          <%= f.radio_button :class_number_id, 7 %>5組
+          <%= f.radio_button :class_number_id, 8 %>6組
+
+        <div class='field'>
+          <div class='field-label'>
+            <%= f.label :number_id %>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :number_id %>
+          </div>
+        </div>
         </div>
 
     <%# 商品の詳細 %>
-    <div class="users-detail">
+    <%# <div class="users-detail"> %>
 
-      <div class="form">
+      <%# <div class="form"> %>
 
-        <div class="weight-bold-text">ユーザータイプ</div>
-          <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"user-genre"}) %>
+        <%# <div class="weight-bold-text">ユーザータイプ</div>
+          <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"user-genre"}) %> 
+                
+        <%# <div class="weight-bold-text">学年</div>
+          <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"user-grade-status"}) %> 
         
-          
-        
-        <div class="weight-bold-text">学年</div>
-          <%= f.collection_select(:grade_id, Grade.all, :id, :name, {}, {class:"select-box", id:"user-grade-status"}) %>
-        
-
-        <div class="weight-bold-text">組</div>
+        <%# <div class="weight-bold-text">組</div>
           <%= f.collection_select(:class_number_id, ClassNumber.all, :id, :name, {}, {class:"select-box", id:"class-number-status"}) %>
-      
 
-        <div class="weight-bold-text">学年</div>
+        <%# <div class="weight-bold-text">学年</div>
           <%= f.collection_select(:number_id, Number.all, :id, :name, {}, {class:"select-box", id:"user-number-status"}) %>
 
-      </div>
+      <%# </div> %>
 
-    </div>
+    <%# </div> %>
     <%# /商品の詳細 %>
 
 
